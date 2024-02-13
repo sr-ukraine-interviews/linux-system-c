@@ -18,26 +18,27 @@
 		<div class="reveal">
 			<form action="/demo.html">
 			<div class="slides"> 
-				<section>
-					<h3>Linux System C Developer</h3>
-					<p>
-						<small>pre-interview self-evaluation quiz</small>
-					</p>
-				</section>
-				<section>
-					<h4>Enter ID received from HR manager</h4>
-					<p>
-						<input type="text" id="candidate_id" name="candidate_id" style="font-size:24px;">
-					</p>
-				</section>				
-				<section data-visibility="hidden">
-					<h2>Hidden Slide</h2>
-					<p>
-						This is example how to turn off some questions.
-					</p>
-				</section>
 
+<section>
+	<h3>Linux System C Developer</h3>
+	<p>
+		<small>pre-interview survey</small>
+	</p>
+</section>
 
+<section>
+	<h4>Enter ID received from HR manager</h4>
+	<p>
+		<input type="text" id="candidate_id" name="candidate_id" style="font-size:24px;">
+	</p>
+</section>				
+
+<section data-visibility="hidden">
+	<h2>Hidden Slide</h2>
+	<p>
+		This is example how to turn off some questions.
+	</p>
+</section>
 
 <section data-auto-animate>
 <pre>
@@ -136,7 +137,7 @@ void inplace_reverse(const char* str)
 
 <section data-auto-animate>
 <pre>
-4. Consider the following string reverse algorithm.<br>
+4. Consider the following string reverse algorithm<br>
 <small>
 Letters A,...,F are written on cards. Cards are randomly picked in some order, like [C, D, F, B, A, E].<br>
 If reverse order [F, E, D, C, B, A] is received, the algorithm terminates.<br>
@@ -145,6 +146,42 @@ What is the speed of such string reverse algorithm?
 </small>
 </pre>
 <img src="images/sixletters.png" width="300px">
+<pre>
+<label for="q1">Your answer: </label>
+<textarea type="text" id="q1" name="q1" cols="113" rows="10">
+</textarea>
+</pre>
+</section>
+
+<section data-auto-animate>
+<pre>
+5. The following question covers Linux Device Model understanding<br>
+<small>
+A WEB camera is inserted into USB hub. Briefly describe what happens next: 
+- how Linux Kernel detects new device and looks for a driver
+- what is the device initialization procedure, up until it appears in /dev
+</small>
+</pre>
+<img src="images/laboratoare-plug_and_play-linux_device_model_structures.png" width="500px" style="margin: 0px;">
+<pre>
+<label for="q1">Your answer: </label>
+<textarea type="text" id="q1" name="q1" cols="113" rows="10">
+</textarea>
+</pre>
+</section>
+
+<section data-auto-animate>
+<pre>
+6. The following question covers understanding of applied cryptography<br>
+<small>
+You are challenged to build a simple peer-to-peer chat (2 peers, simple text). 
+Describe basic security needs. Suggest algorighms and protocols to cover these needs. At least, consider:
+- initial trust establishment between peers
+- channel security
+Comments on strong/weak crypto, advanced features (forward secrecy oth.) and examples from industry are welcome.
+</small>
+</pre>
+<img src="images/Alice-bob-mallory.jpg" width="400px" style="margin: 0px;">
 <pre>
 <label for="q1">Your answer: </label>
 <textarea type="text" id="q1" name="q1" cols="113" rows="10">
