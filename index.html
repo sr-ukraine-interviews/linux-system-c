@@ -1,1 +1,126 @@
-Hello !
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Linux System C Developer</title>
+
+		<link rel="stylesheet" href="reveal/reset.css">
+		<link rel="stylesheet" href="reveal/reveal.css">
+		<link rel="stylesheet" href="reveal/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		
+		<div class="reveal">
+			<form action="/demo.html">
+			<div class="slides"> 
+				<section>
+					<h3>Linux System C Developer</h3>
+					<p>
+						<small>pre-interview self-evaluation quiz</small>
+					</p>
+				</section>
+				<section>
+					<h4>Enter ID received from HR manager</h4>
+					<p>
+						<input type="text" id="candidate_id" name="candidate_id" style="font-size:24px;">
+					</p>
+				</section>				
+				<section data-visibility="hidden">
+					<h2>Hidden Slide</h2>
+					<p>
+						This is example how to turn off some questions.
+					</p>
+				</section>
+
+
+
+<section data-auto-animate>
+<pre>
+1. Describe all issues in this code.<br>Propose your code that is doing the same in a more proper way.
+</pre>
+<pre data-id="code-animation">
+<code class="language-c" data-trim data-line-numbers>
+	char* bool2str(int value)
+	{
+		char buf[5];
+		
+		if (value == 1)
+			strcpy(buf, "TRUE");
+		else
+			strcpy(buf, "FALSE");
+
+		return buf;
+	}
+</code>
+</pre>				
+<pre>
+<label for="q1">Your answer: </label>
+<textarea type="text" id="q1" name="q1" cols="113" rows="10">
+</textarea>
+</pre>
+</section>	
+		
+<section data-auto-animate>
+<pre>
+2. Describe nuances of using static keyword.<br>
+Which type of memory is used for storing such variables?<br>
+Which best practices or typical situations do you know where static keyword helps?
+</pre>
+<pre data-id="code-animation">
+<code class="language-c" data-trim data-line-numbers>
+	a.h
+	static int a1;
+
+	b.c
+	#include "a.h"
+	int f()
+	{
+		a1 = 1;
+	}	
+</code>
+</pre>				
+<pre>
+<label for="q1">Your answer: </label>
+<textarea type="text" id="q1" name="q1" cols="113" rows="10">
+</textarea>
+</pre>
+</section>
+
+<section>
+	<h4>Submit Quiz</h4>
+	<input type="submit" value="Send" style="font-size:24px;">
+</section>
+				
+		
+			</div>
+		</form>
+		</div>
+	
+
+		<script src="reveal/reveal.js"></script>
+		<!-- <script src="plugin/notes/notes.js"></script> -->
+		<!-- <script src="plugin/markdown/markdown.js"></script> -->
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				// plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				plugins: [ RevealHighlight ],
+
+				// Determines where controls appear, "edges" or "bottom-right"
+  controlsLayout: 'edges',
+			});
+		</script>
+	
+	</body>
+</html>
