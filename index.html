@@ -43,7 +43,7 @@
 <pre>
 1. Describe all issues in this code.<br>Propose your code that is doing the same in a more proper way.
 </pre>
-<pre data-id="code-animation">
+<pre data-id="code-animation" style="font-size:14px;">
 <code class="language-c" data-trim data-line-numbers>
 	char* bool2str(int value)
 	{
@@ -64,10 +64,48 @@
 </textarea>
 </pre>
 </section>	
+
+<section data-auto-animate>
+<pre>
+2. What nuances do you see here?<br>
+How this code will operate and how to improve it?
+</pre>
+<pre data-id="code-animation" style="font-size:14px;">
+<code class="language-c" data-trim data-line-numbers >
+	int a(int* value)
+	{
+		return *value + 1;
+	}
+
+	int b(int* value)
+	{
+		return *value - 1;
+	}
+	
+	void c(int v1, int v2)
+	{
+		printf("%d", v1 + v2);
+	}
+
+	void main()
+	{
+		int value = INT_MAX;
+		c(a(&value), b(&value));
+	}
+</code>
+</pre>				
+<pre>
+<label for="q1">Your answer: </label>
+<textarea type="text" id="q1" name="q1" cols="113" rows="10">
+</textarea>
+</pre>
+</section>
+
+
 		
 <section data-auto-animate>
 <pre>
-2. Describe nuances of using static keyword.<br>
+3. Describe nuances of using static keyword.<br>
 Which type of memory is used for storing such variables?<br>
 Which best practices or typical situations do you know where static keyword helps?
 </pre>
