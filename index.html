@@ -16,7 +16,8 @@
 	<body>
 		
 		<div class="reveal">
-			<form action="/demo.html" method="POST">
+			
+			<form action="http://localhost:8080" method="POST" id="submitform">
 			<input type="hidden" id="surveyId" name="surveyId" value="linux-system-c">
 
 			<div class="slides"> 
@@ -368,6 +369,36 @@ Which best practices or typical situations do you know where static keyword help
 
 			});
 		</script>
+
+		<script>
+
+			function showSubmissionStatus(message)
+			{
+				document.getElementsByTagName('body')[0].innerHTML = `
+					<center style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center;">
+						<h1 style="color:white; font-size:36px;">` + 
+							message +
+						`</h1>
+					</center>`
+			}
+
+			function onSubmit(event) 
+			{
+				const formData = new FormData(document.getElementById("submitform"));
+				fetch('https://webhook.site/623e1ee9-60b8-4f8f-9c52-07c761239ad0', {
+					method: 'POST',
+					headers: event.headers,
+					body: formData,
+					mode: 'no-cors'
+				})
+				.then(response => showSubmissionStatus("SUBMITTED"))
+				.catch(err => showSubmissionStatus("Submission Error"))
+			
+				event.preventDefault();
+			}
+			document.getElementById("submitform").addEventListener("submit", onSubmit);
+			
+		</script>		
 	
 	</body>
 </html>
